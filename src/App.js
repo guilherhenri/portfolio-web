@@ -1,8 +1,10 @@
 import { About, Footer, Header, Skills, Testimonial, Work } from './containers';
+import { Navbar } from './components';
 
 const App = () => {
   return (
     <div className='app'>
+      <Navbar />
       <Header />
       <About />
       <Work />
