@@ -31,11 +31,11 @@ const About = () => {
   return (
     <>
       <h2 className='head-text'>
-        Eu sei que
-        <span>Um bom design</span>
+        Eu sei que{' '}
+        <span>um bom produto</span>
         <br />
-        significa
-        <span>Ótimos negócios</span>
+        significa{' '}
+        <span>um ótimo negócio</span>
       </h2>
 
       <div className='app__profiles'>
