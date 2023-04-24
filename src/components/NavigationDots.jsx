@@ -7,12 +7,12 @@ const NavigationDots = ({ acitve }) => {
             key={item + index} 
             href={`#${item}`} 
             className="app__navigation-dot"
-            style={acitve === item && { backgroundColor: '#313bac'}}
-          >{''}</a>
+            style={acitve === item ? { backgroundColor: '#313bac'} : {}}
+          />
         )
       )}
     </div>
   )
 }
 
-export default NavigationDots;
+export default NavigationDots; 
