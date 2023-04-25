@@ -79,7 +79,7 @@ const Footer = () => {
           </div>
 
           <button type='button' className='p-text' onClick={handleSubmit}>
-            {loading ? 'Enviando' : 'Enviar'}
+            {loading ? 'Enviando' : 'Enviar Mensagem'}
           </button>
         </div>
       ) : (
@@ -94,5 +94,5 @@ const Footer = () => {
 export default AppWrap(
   MotionWrap(Footer, 'app__footer'),
   'contato',
-  'app_whitebg'
+  'app__whitebg'
 );
