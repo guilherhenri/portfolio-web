@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { AiFillEye, AiFillGithub } from 'react-icons/ai';
 
 import { AppWrap } from '../../wrapper';
+import { images } from '../../constants';
 import './Work.scss';
 
 const Work = () => {
@@ -10,7 +11,12 @@ const Work = () => {
   const [animateCard, setAnimateCard] = useState({ y: 0, opacity: 1 });
 
   const handleWorkFilter = (item) => {
+    setActiveFilter(item);
+    setAnimateCard([{ y: 100, opacity: 0 }]);
 
+    setTimeout(() => {
+      setAnimateCard([{ y: 0, opacity: 1 }]);
+    }, 500);
   };
  
   return (
@@ -36,7 +42,7 @@ const Work = () => {
       >
         <div className='app__work-item app__flex'>
           <div className='app__work-img app__flex'>
-            <img src="" alt="" />
+            <img src={images.about01} alt="ing" />
 
             <motion.div
               whileHover={{ opacity: [0, 1] }}
