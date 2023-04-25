@@ -15,12 +15,16 @@ const Navbar = () => {
       </div>
 
       <ul className='app__navbar-links'>
-        {['home', 'sobre', 'trabalho', 'habilidades', 'contato'].map((item) => (
-          <li key={`link-${item}`} className='app__flex p-text'>
-            <div />
-            <a href={`#${item}`}>{item}</a>
-          </li>
-        ))}
+        {
+          [
+            'home', 'sobre', 'trabalho', 'habilidades', 'testemunhos', 'contato'
+          ].map((item) => (
+            <li key={`link-${item}`} className='app__flex p-text'>
+              <div />
+              <a href={`#${item}`}>{item}</a>
+            </li>
+          ))
+        }
       </ul>
 
       <div className="app__navbar-menu">
