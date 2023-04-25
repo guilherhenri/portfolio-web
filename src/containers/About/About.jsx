@@ -1,9 +1,8 @@
 import { motion } from 'framer-motion';
 
-import { AppWrap } from '../../wrapper';
-
-import './About.scss';
+import { AppWrap, MotionWrap } from '../../wrapper';
 import { images } from '../../constants';
+import './About.scss';
 
 const abouts = [
   { 
@@ -62,4 +61,8 @@ const About = () => {
   )
 }
 
-export default AppWrap(About, 'sobre');
+export default AppWrap(
+  MotionWrap(About, 'app__about'),
+  'sobre',
+  'app__whitebg'
+);

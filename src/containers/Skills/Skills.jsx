@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Tooltip } from 'react-tooltip';
 
-import { AppWrap } from '../../wrapper'; 
+import { AppWrap, MotionWrap } from '../../wrapper'; 
 import { images } from '../../constants';
 import './Skills.scss';
 
@@ -18,7 +18,7 @@ const Skills = () => {
             transition={{ duration: 0.5 }}
             className='app__skills-item app__flex'
           >
-            <div className="app__flex">
+            <div className="app__flex" style={{ backgroundColor: '#edf2f8'}}>
               <img src={images.react} alt="img" />
             </div>
 
@@ -30,7 +30,7 @@ const Skills = () => {
             transition={{ duration: 0.5 }}
             className='app__skills-item app__flex'
           >
-            <div className="app__flex">
+            <div className="app__flex" style={{ backgroundColor: '#edf2f8'}}>
               <img src={images.node} alt="img" />
             </div>
 
@@ -42,7 +42,7 @@ const Skills = () => {
             transition={{ duration: 0.5 }}
             className='app__skills-item app__flex'
           >
-            <div className="app__flex">
+            <div className="app__flex" style={{ backgroundColor: '#edf2f8'}}>
               <img src={images.typescript} alt="img" />
             </div>
 
@@ -82,4 +82,8 @@ const Skills = () => {
   )
 }
 
-export default AppWrap(Skills, 'habilidades');
+export default AppWrap(
+  MotionWrap(Skills, 'app__skills'), 
+  'habilidades',
+  'app__whitebg'
+);
